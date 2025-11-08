@@ -1,0 +1,101 @@
+:root{
+    --bs-primary:#0d6efd;
+    --bs-secondary:#6c757d;
+    --bs-success:#198754;
+    --bs-danger:#dc3545;
+    --bs-warning:#ffc107;
+    --bs-info:#0dcaf0;
+    --bs-light:#f8f9fa;
+    --bs-dark:#212529;
+}
+
+/*stilo de efecto para una galeria*/
+.img-hover img{
+    transition: transform .3s ease, filter .3s ease;
+}
+
+.img-hover:hover img{
+    transform: scale(1.03);
+    filter: brightness(0.9);
+}
+
+/*ajustes de card pequeñas*/
+.card-title { 
+    letter-spacing: .2px;
+}
+
+footer small {
+    color:#6c757d
+}
+
+/* Nuevos estilos para uniformidad de cards */
+.card-img-top,
+.card img.card-img-top{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+.card .card-body {
+    min-height: 70px;
+}
+.card{
+    overflow: hidden;
+    margin: 8px 6px;
+    border-radius: 8px;
+}
+.card.img-hover {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.card.img-hover:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0,.12);
+}
+
+/* Carousel: mantener tamaño y recorte consistente */
+.carousel-inner img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center center;
+}
+@media (max-width: 768px) {
+    .card-img-top,
+    .card img.card-img-top {
+        height: 240px;
+    }
+    .carausel-inner img {
+        height: 280px;
+    }
+}
+@media (max-width: 480px) {
+    .card-img-top,
+    .card img.card-img-top {
+        height: 200px;
+    }
+    .carausel-inner img {
+        height: 200px;
+    }
+}
+
+/* Lightbox */
+#lightboxImage {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 140px);
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+#lightboxCaption {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.modal-content.bg-transparent {
+  background: rgba(0,0,0,0.75);
+}
+.modal .btn-close.btn-close-white {
+  filter: invert(1);
+}
